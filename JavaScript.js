@@ -1,3 +1,7 @@
+let humanScore = 0;
+let computerScore = 0;
+
+
 function getHumanChoice() {
     let humanInput = prompt(`Please input either rock, paper, or scissors: `);
     let humanChoice = humanInput.toLowerCase();
@@ -41,3 +45,16 @@ function playRound(humanChoice, computerChoice) {
         }
     }
 }
+
+function playGame() {
+    for (let index = 0; index < 5; index++) {
+        let humanAnswer = getHumanChoice();
+        let computerAnswer = getComputerChoice();
+        playRound(humanAnswer, computerAnswer);
+        console.log(`The score is human: ${humanScore} computer: ${computerScore}.`)
+    }
+    humanScore = 0;
+    computerScore = 0;
+};
+
+playGame();
