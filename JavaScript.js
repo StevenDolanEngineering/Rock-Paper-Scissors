@@ -47,7 +47,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    for (let index = 0; index <= 5 ; index++) {
+    for (let index = 0; index < 5 ; index++) {
         let humanAnswer = getHumanChoice();
         let computerAnswer = getComputerChoice();
         playRound(humanAnswer, computerAnswer);
